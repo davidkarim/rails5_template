@@ -21,3 +21,12 @@ git remote -v
 # Set remote to new URL
 git remote set-url origin <https or ssl-url>
 ```
+
+## Starting With Rails
+
+```
+rails new sampleapp
+cd sampleapp
+# Start rails server
+rails s --binding=0.0.0.0
+```

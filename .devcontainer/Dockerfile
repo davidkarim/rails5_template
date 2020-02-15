@@ -28,6 +28,9 @@ RUN apt-get install -y hstr
 RUN hstr --show-zsh-configuration >> ~/.hstr
 RUN cat ~/.hstr >> ~/.zshrc
 
+# Place history file in working directory so that it persists
+RUN sed -i 's/export HISTFILE=~\/.zsh_history/export HISTFILE=$PWD\/.zsh_history/' ~/.zshrc
+
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY ./Gemfile /myapp/Gemfile
