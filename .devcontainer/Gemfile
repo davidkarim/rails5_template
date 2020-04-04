@@ -1,2 +1,4 @@
 source 'https://rubygems.org'
 gem 'rails', '~>5'
+gem 'ruby-debug-ide', '~>0.7.0'
+gem 'debase', '~>0.2.4.1'
